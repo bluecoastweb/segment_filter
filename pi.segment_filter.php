@@ -39,7 +39,7 @@ class Segment_filter {
         ob_start();
 ?>
 
-Enforce strict URLs by disallowing or permitting only certain values for a specified segment.
+Enforce strict URLs by permitting only certain values for a specified segment.
 
 For example, if segment_2 != '' then redirect to /segment_1:
 
