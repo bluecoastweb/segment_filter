@@ -18,7 +18,7 @@ class Segment_filter {
         if (! $segment) {
             return;
         }
-        $permitted_values = array_filter(explode('|', $this->EE->TMPL->fetch_param('permitted')));
+        $permitted_values = array_filter(explode('|', $this->EE->TMPL->fetch_param('permitted', '')));
         if (in_array($segment, $permitted_values)) {
             return;
         };
@@ -39,9 +39,19 @@ class Segment_filter {
         ob_start();
 ?>
 
-{exp:segment_filter number='2' permitted='this|that'}
+Enforce strict URLs by disallowing or permitting only certain values for a specified segment.
 
-{exp:segment_filter number='2' permitted='this|that' redirect='/somewhere/else'}
+For example, iF segment_2 != '' then redirect to /segment_1:
+
+{exp:segment_filter number='2'}
+
+If segment_2 != '' then redirect to /somewhere/else:
+
+{exp:segment_filter number='2' redirect='/somewhere/else'}
+
+If segment_2 != 'this' or 'that' then redirect to /segment_1:
+
+{exp:segment_filter number='2' permitted='this|that'}
 
 <?php
     $buffer = ob_get_contents();
