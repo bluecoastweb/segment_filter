@@ -1,7 +1,7 @@
 segment_filter
 ==============
 
-ExpressionEngine plugin to enforce strict URLs by disallowing or permitting only certain values for a specified segment.
+ExpressionEngine plugin to enforce strict URLs by permitting only certain values for a specified segment.
 
 For example, if segment_2 != '' then redirect to /segment_1:
 
