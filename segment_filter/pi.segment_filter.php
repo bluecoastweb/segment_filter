@@ -2,7 +2,7 @@
 
 $plugin_info = array(
     'pi_name'        => 'Segment Filter',
-    'pi_version'     => '1.0.1',
+    'pi_version'     => '1.1',
     'pi_author'      => 'Steve Pedersen',
     'pi_author_url'  => 'http://www.bluecoastweb.com',
     'pi_description' => 'Filter extra segments',
